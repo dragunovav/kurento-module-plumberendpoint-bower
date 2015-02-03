@@ -33,7 +33,7 @@ var Endpoint = kurentoClient.register.abstracts.Endpoint;
  * @classdesc
  *  Endpoint that allows remote pipelines to negotiate the format of the media as well as to send data over SCTP. A {@link module:plumberendpoint.PlumberEndpoint PlumberEndpoint} contains paired sink and source :rom:cls:`MediaPad` for audio and video. This API is still under development so it might change without requiring a version change.
  *
- * @extends module:corecore/abstracts.Endpoint
+ * @extends module:core/abstracts.Endpoint
  *
  * @constructor module:plumberendpoint.PlumberEndpoint
  */
@@ -144,7 +144,7 @@ PlumberEndpoint.constructorParams = {
 /**
  * @alias module:plumberendpoint.PlumberEndpoint.events
  *
- * @extend module:corecore/abstracts.Endpoint.events
+ * @extends module:core/abstracts.Endpoint.events
  */
 PlumberEndpoint.events = Endpoint.events;
 
