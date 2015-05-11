@@ -1,14 +1,20 @@
 {
-  "authors": [
-    "Kurento <info@kurento.com> (http://kurento.org)"
-  ],
   "name": "kurento-module-plumberendpoint",
-  "version": "6.0.0-dev",
   "license": "All Rights Reserved",
-  "homepage": "http://www.kurento.com",
   "keywords": [
     "Kurento",
     "module",
     "plugin"
-  ]
+  ],
+  "homepage": "http://www.kurento.com",
+  "authors": [
+    "Kurento <info@kurento.com> (http://kurento.org)"
+  ],
+  "ignore": [
+    "doc/",
+    "lib/",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "main": "dist/kurento-module-plumberendpoint.js"
 }
