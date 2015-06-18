@@ -4,16 +4,15 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 var inherits = require('inherits');
@@ -114,20 +113,17 @@ PlumberEndpoint.prototype.getPort = function(callback){
 // Public methods
 //
 
-
 /**
  * Connect a control channel to the remote {@link 
  * module:plumberendpoint.PlumberEndpoint PlumberEndpoint}
  *
  * @alias module:plumberendpoint.PlumberEndpoint.link
  *
- * @param   {external:String} address
-
+ * @param {external:String} address
  *  IP Address where the {@link module:plumberendpoint.PlumberEndpoint 
  *  PlumberEndpoint} is waiting for
  *
- * @param   {external:Integer} port
-
+ * @param {external:Integer} port
  *  Port where the {@link module:plumberendpoint.PlumberEndpoint 
  *  PlumberEndpoint} is listening to
  *
@@ -140,15 +136,15 @@ PlumberEndpoint.prototype.link = function(address, port, callback){
                   ? Array.prototype.shift.apply(arguments)
                   : undefined;
 
-  checkType('String', 'address', address, {required: true}
-);
-  checkType('int', 'port', port, {required: true}
-);
+  checkType('String', 'address', address, {required: true});
+  checkType('int', 'port', port, {required: true});
 
   var params = {
     address: address,
-    port: port,
+    port: port
   };
+
+  callback = (callback || noop).bind(this)
 
   return this._invoke(transaction, 'link', params, callback);
 };
@@ -161,8 +157,7 @@ PlumberEndpoint.prototype.link = function(address, port, callback){
 /**
  * @alias module:plumberendpoint.PlumberEndpoint.constructorParams
  *
- * @property   {module:core.MediaPipeline} mediaPipeline
-
+ * @property {module:core.MediaPipeline} mediaPipeline
  *  the {@link module:core.MediaPipeline MediaPipeline} to which the endpoint 
  *  belongs
  */
@@ -170,7 +165,7 @@ PlumberEndpoint.constructorParams = {
   mediaPipeline: {
     type: 'MediaPipeline',
     required: true
-  },
+  }
 };
 
 /**
@@ -213,16 +208,15 @@ require('.');
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 /**
