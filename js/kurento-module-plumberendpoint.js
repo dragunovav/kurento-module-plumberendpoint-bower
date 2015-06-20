@@ -19,8 +19,11 @@ var inherits = require('inherits');
 
 var kurentoClient = require('kurento-client');
 
+var disguise = kurentoClient.disguise;
+
 var checkType      = kurentoClient.checkType;
 var ChecktypeError = checkType.ChecktypeError;
+
 
 var Transaction = kurentoClient.TransactionsManager.Transaction;
 
@@ -76,7 +79,7 @@ PlumberEndpoint.prototype.getAddress = function(callback){
 
   callback = (callback || noop).bind(this)
 
-  return this._invoke(transaction, 'getAddress', callback);
+  return disguise(this._invoke(transaction, 'getAddress', callback), this)
 };
 /**
  * @callback module:plumberendpoint.PlumberEndpoint~getAddressCallback
@@ -102,7 +105,7 @@ PlumberEndpoint.prototype.getPort = function(callback){
 
   callback = (callback || noop).bind(this)
 
-  return this._invoke(transaction, 'getPort', callback);
+  return disguise(this._invoke(transaction, 'getPort', callback), this)
 };
 /**
  * @callback module:plumberendpoint.PlumberEndpoint~getPortCallback
@@ -148,7 +151,7 @@ PlumberEndpoint.prototype.link = function(address, port, callback){
 
   callback = (callback || noop).bind(this)
 
-  return this._invoke(transaction, 'link', params, callback);
+  return disguise(this._invoke(transaction, 'link', params, callback), this)
 };
 /**
  * @callback module:plumberendpoint.PlumberEndpoint~linkCallback
