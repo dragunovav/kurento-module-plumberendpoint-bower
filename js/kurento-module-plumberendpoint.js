@@ -182,7 +182,7 @@ PlumberEndpoint.events = Endpoint.events;
 
 
 /**
- * Checker for {@link plumberendpoint.PlumberEndpoint}
+ * Checker for {@link module:plumberendpoint.PlumberEndpoint}
  *
  * @memberof module:plumberendpoint
  *
