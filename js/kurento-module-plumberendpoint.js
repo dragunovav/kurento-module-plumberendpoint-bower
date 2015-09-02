@@ -234,7 +234,7 @@ require('.');
  */
 
 Object.defineProperty(exports, 'name',    {value: 'plumberendpoint'});
-Object.defineProperty(exports, 'version', {value: '6.0.0-dev'});
+Object.defineProperty(exports, 'version', {value: '6.1.0'});
 
 
 var PlumberEndpoint = require('./PlumberEndpoint');
